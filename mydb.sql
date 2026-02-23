@@ -10,13 +10,13 @@ CREATE TABLE sales (
     amount FLOAT,
     CONSTRAINT fkitem FOREIGN KEY(itemid) REFERENCES item(itemid)
 );
-GRANT INSERT, UPDATE, DELETE, SELECT ON item TO user1;
+GRANT INSERT, UPDATE, DELETE, SELECT ON item TO userb;
  
-GRANT INSERT, UPDATE, DELETE, SELECT ON sales TO user1;
+GRANT INSERT, UPDATE, DELETE, SELECT ON sales TO userb;
  
  
-GRANT SELECT ON item TO user1; 
-GRANT SELECT ON sales TO user1;
+GRANT SELECT ON item TO userb; 
+GRANT SELECT ON sales TO userb;
  
 -- Insert sample data
 INSERT INTO item VALUES (1, 'Coffee', 100);
